@@ -86,10 +86,12 @@ section .hero-content {
 }
 
 .hero-content h1 {
-  max-width: 40%;
+  max-width: 50%;
   color: #fff;
   letter-spacing: 0.5px;
   line-height: 56px;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 .hero-content p {
@@ -113,4 +115,26 @@ section .hero-content {
   color: #fff;
   border: none;
   text-transform: uppercase;
+}
+
+section.best-sellers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.best-sellers hr {
+  width: 45px;
+  border: none;
+  border-top: 5px solid #fe4542;
+}
+
+.best-sellers h2 {
+  padding-top: 80px;
+  font-weight: normal;
+}
+
+.best-sellers .product-container {
+  margin-top: 15px;
+  display: flex;
 }
