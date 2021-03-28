@@ -6,7 +6,6 @@
 
 body {
   padding-top: 5rem;
-  min-height: 100rem;
 }
 
 a {
@@ -59,6 +58,10 @@ header nav ul li a {
   color: #3e3e3e;
   margin-right: 24px;
   text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #515cf8;
 }
 
 header nav ul li:last-of-type a {
@@ -119,6 +122,12 @@ section .hero-content {
   color: #fff;
   border: none;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #fff;
+  color: #fe4542;
 }
 
 section.best-sellers {
@@ -186,7 +195,16 @@ section.best-sellers .product-container {
   border-radius: 8px;
   border: none;
   background-color: #039634cc;
+  color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #039634cc;
+}
+
+.product-card button:hover {
+  color: #039634cc;
+  background-color: #fff;
+  border: 1px solid #039634cc;
 }
 
 .product-card {
@@ -209,4 +227,137 @@ section.best-sellers .product-container {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.product-card.discount::before {
+  content: "HOT";
+  position: absolute;
+  background-color: #ca3a37;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  padding: 2px 12px;
+  border: none;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.product-info .price .discounted-price {
+  font-weight: normal;
+}
+
+.product-info .price .original-price {
+  font-weight: normal;
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: bold;
+  color: #b40c09;
+}
+
+section.newsletter {
+  text-align: center;
+  background-color: rgba(200, 200, 200, 0.18);
+  max-width: 585px;
+  margin: 80px auto;
+  padding: 50px 0;
+}
+
+section.newsletter h3 {
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  line-height: 42px;
+  margin-bottom: 10px;
+}
+
+section.newsletter p {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 42px;
+  margin-bottom: 20px;
+}
+
+section.newsletter form {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+}
+
+section.newsletter input {
+  width: 225px;
+  max-width: 80%;
+  border-radius: 125px 0 0 125px;
+  padding-left: 10px;
+  border: 1px solid #3e3e3e;
+  border-right: 0;
+  letter-spacing: 0.3px;
+}
+
+section.newsletter button {
+  width: 125px;
+  max-width: 20%;
+  border-radius: 0 125px 125px 0;
+  border: none;
+  background-color: #6771ff;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+section.newsletter button:hover {
+  border: 1px solid #6771ff;
+  background-color: #fff;
+  color: #6771ff;
+  cursor: pointer;
+}
+
+footer {
+  color: #fff;
+}
+
+footer .bottom-nav {
+  background-color: #353747;
+  padding: 60px 0;
+}
+
+footer .copyright {
+  background-color: #2a2c41;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5px;
+}
+
+footer .bottom-nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .bottom-nav li.list-title {
+  cursor: default;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+footer .bottom-nav li {
+  list-style: none;
+}
+
+footer .bottom-nav .container ul li a {
+  color: #e0e0e0;
+  letter-spacing: 0.4px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+footer .bottom-nav .container ul li a:hover {
+  color: #fff;
 }
