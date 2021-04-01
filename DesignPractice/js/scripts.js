@@ -14,8 +14,7 @@ hamburgerClose.onclick = function () {
 };
 
 // About us Tab
-
-var aboutUs = {
+let aboutUs = {
   Mission:
     "Duis ac leo nisi. Mauris nec ex id lorem commodo rutrum rutrum a est. Cras facilisis sit amet lectus non posuere. Nullam non magna non enim blandit elementum.",
   Vision:
@@ -24,12 +23,28 @@ var aboutUs = {
     "<ul><li>Nunc iaculis</li><li>Donec dictum fringilla</li><li>Duis convallis tortor ultrices</li><li>Curabitur in est lectus</li><li>Maecenas condimentum elit</li></ul>",
 };
 
-var unseletectedColor = "#646872";
-var seletectedColor = "#2A2D34";
+let unselectedColor = "#646872";
+let selectedColor = "#2A2D34";
+
+const aboutUsTabs = document.querySelectorAll(".single-tab");
+
+for (let i = 0; i < aboutUsTabs.length; i++) {
+  aboutUsTabs[i].onclick = function () {
+    let clickedTabValue = this.innerHTML;
+    document.querySelector("#box-text").innerHTML = aboutUs[clickedTabValue];
+
+    for (let i = 0; i < aboutUsTabs.length; i++) {
+      aboutUsTabs[i].style.backgroundColor = unselectedColor;
+      aboutUsTabs[i].style.fontWeight = "normal";
+    }
+
+    this.style.backgroundColor = selectedColor;
+    this.style.fontWeight = "bold";
+  };
+}
 
 // Service slider
-
-var ourServices = [
+let ourServices = [
   {
     title: "Web design",
     text:
