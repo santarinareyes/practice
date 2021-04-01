@@ -1,9 +1,7 @@
 // Mobile Menu
-const hamburgerBtn = document.querySelector(".hamburguer-icon");
-const hamburgerClose = document.querySelector(
-  "#sliding-header-menu-close-button"
-);
-const hamburgerSlider = document.querySelector("#sliding-header-menu-outer");
+const hamburgerBtn = document.querySelector(".hamburguer-icon"),
+  hamburgerClose = document.querySelector("#sliding-header-menu-close-button"),
+  hamburgerSlider = document.querySelector("#sliding-header-menu-outer");
 
 hamburgerBtn.onclick = function () {
   hamburgerSlider.style.right = "0px";
@@ -64,15 +62,36 @@ let ourServices = [
   },
 ];
 
-const servicesNext = document.querySelector("#service-next");
-const servicesPrev = document.querySelector("#service-previous");
+const servicesNext = document.querySelector("#service-next"),
+  servicesPrev = document.querySelector("#service-previous"),
+  serviceTitle = document.querySelector("#service-title"),
+  serviceText = document.querySelector("#service-text");
+
+let currentService = 0;
 
 servicesNext.onclick = function () {
-  console.log("next clicked");
+  if (currentService < ourServices.length - 1) {
+    currentService++;
+    serviceTitle.innerHTML = ourServices[currentService].title;
+    serviceText.innerHTML = ourServices[currentService].text;
+  } else {
+    currentService = 0;
+    serviceTitle.innerHTML = ourServices[currentService].title;
+    serviceText.innerHTML = ourServices[currentService].text;
+  }
+  console.log(currentService);
 };
 
 servicesPrev.onclick = function () {
-  console.log("prev clicked");
+  if (currentService > 0) {
+    currentService--;
+    serviceTitle.innerHTML = ourServices[currentService].title;
+    serviceText.innerHTML = ourServices[currentService].text;
+  } else {
+    currentService = ourServices.length - 1;
+    serviceTitle.innerHTML = ourServices[currentService].title;
+    serviceText.innerHTML = ourServices[currentService].text;
+  }
 };
 
 // Footer
