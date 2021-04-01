@@ -95,6 +95,8 @@ servicesPrev.onclick = function () {
 };
 
 // Footer
-let getCurrentDate = new Date();
-let currentYear = getCurrentDate.getFullYear();
-document.querySelector("#current_year").innerHTML = currentYear.toString();
+// let getCurrentDate = new Date();
+// let currentYear = getCurrentDate.getFullYear();
+document.querySelector(
+  "#current_year"
+).innerHTML = new Date().getFullYear().toString();
