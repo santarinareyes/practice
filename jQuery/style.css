@@ -64,7 +64,7 @@ hr {
   border: 1px solid #e3e3e3;
 }
 
-#selected_option {
+.selected_option {
   min-width: 160px;
   max-width: 160px;
 }
@@ -99,4 +99,9 @@ form#option_form {
 .third.container {
   display: flex;
   flex-direction: column;
+}
+
+form.radio_form {
+  display: flex;
+  justify-content: center;
 }

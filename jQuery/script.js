@@ -84,5 +84,10 @@ $("#btn_write_something").click(function () {
 // Options
 $("#options").change(function () {
   let selectedText = $("#options option:selected").text();
-  $("#selected_option_text").text(selectedText);
+  $("#selected_option p").text(selectedText);
+});
+
+// Radio
+$("input[name='location']").change(function () {
+  $("#selected_radio p").text($("input[name='location']:checked").val());
 });
