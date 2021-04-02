@@ -33,12 +33,14 @@ hr {
 
 #hide:hover,
 #change_image:hover,
-#btn_write_something:hover {
+#btn_write_something:hover,
+#submit:hover {
   background-color: #034732;
   transition: 1s;
 }
 
-.main-button {
+.main-button,
+#submit {
   background-color: #27ae61;
   cursor: pointer;
   transition: 1s;
@@ -73,7 +75,8 @@ hr {
 #options,
 #add_class,
 #remove_class,
-#toggle_class {
+#toggle_class,
+#submit {
   min-width: 180px;
   max-width: 180px;
   align-self: center;
@@ -150,4 +153,14 @@ form.checkbox_form {
 #example-paragraph {
   align-self: center;
   text-align: center;
+}
+
+.something.container {
+  flex-direction: column;
+}
+
+#something {
+  align-self: center;
+  height: 35px;
+  width: 170px;
 }
