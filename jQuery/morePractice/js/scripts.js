@@ -49,6 +49,7 @@ $(function () {
   }
 
   function updateOrderDetails() {
+    $(".refresh-loader").show();
     $("#result-quantity").html(parseInt(searchParams.quantity));
     $("#result-color").html($("#" + searchParams.color).text());
     $("#result-quality").html($("#" + searchParams.quality).text());
@@ -60,6 +61,12 @@ $(function () {
       "src",
       "img/" + products[searchParams.color][searchParams.style].photo
     );
+
+    // Testing purposes only
+    window.setTimeout(function () {
+      console.log("test");
+      $(".refresh-loader").hide();
+    }, 100);
   }
 
   function calculateTotal() {
