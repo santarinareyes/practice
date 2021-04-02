@@ -38,6 +38,23 @@ hr {
   transition: 1s;
 }
 
+.main-button {
+  background-color: #27ae61;
+  cursor: pointer;
+  transition: 1s;
+  margin: 2px 1px;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  display: inline-block;
+  border: none;
+}
+
+.main-button:hover {
+  background-color: #034732;
+  transition: 1s;
+}
+
 /* Change JS/PHP */
 .second.container {
   flex-direction: column;
@@ -53,7 +70,10 @@ hr {
 
 #change_image,
 #btn_write_something,
-#options {
+#options,
+#add_class,
+#remove_class,
+#toggle_class {
   min-width: 180px;
   max-width: 180px;
   align-self: center;
@@ -109,4 +129,25 @@ form.checkbox_form {
 
 #selected_checkbox {
   height: 100%;
+}
+
+.normal {
+  padding: 20px;
+  font-size: 18px;
+  background-color: yellow;
+}
+
+.styling {
+  padding: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  width: 200px;
+  border-radius: 60px;
+}
+
+#example-paragraph {
+  align-self: center;
+  text-align: center;
 }
