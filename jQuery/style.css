@@ -3,8 +3,10 @@
   justify-content: center;
 }
 
+/* Hide/Show */
 .example,
-#hide {
+#hide,
+#change_image {
   margin: 0 1px;
   color: white;
   font-size: 18px;
@@ -16,13 +18,35 @@
   background-color: #1096d5;
 }
 
-#hide {
+#hide,
+#change_image {
   background-color: #27ae61;
   cursor: pointer;
   transition: 1s;
 }
 
-#hide:hover {
+#hide:hover,
+#change_image:hover {
   background-color: #034732;
   transition: 1s;
+}
+
+/* Change JS/PHP */
+.second.container {
+  flex-direction: column;
+}
+
+#image_jquery {
+  align-self: center;
+  min-width: 180px;
+  max-width: 180px;
+  min-height: 180px;
+  max-height: 180px;
+}
+
+#change_image {
+  min-width: 180px;
+  max-width: 180px;
+  align-self: center;
+  border: none;
 }
