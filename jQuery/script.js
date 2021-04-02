@@ -5,12 +5,24 @@ $(function () {
   let hide = false;
   $("#hide").click(function () {
     if (!hide) {
-      $(".example").hide();
+      $(".example").hide(500);
       $("#hide").html("show");
+      $("#hide").animate(
+        {
+          width: "+=112px",
+        },
+        "fast"
+      );
       hide = true;
     } else {
-      $(".example").show();
+      $(".example").show(500);
       $("#hide").html("hide");
+      $("#hide").animate(
+        {
+          width: "-=112px",
+        },
+        "fast"
+      );
       hide = false;
     }
   });
