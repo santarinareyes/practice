@@ -161,20 +161,43 @@
 //     });
 // };
 
+// const btn = document.querySelector("button"),
+//   input = document.querySelector("input"),
+//   response = document.querySelector("#api-response"),
+//   url = "http://localhost/JavaScript Practice/API/v1/products/";
+
+// btn.onclick = function () {
+//   let amountToGet = input.value;
+//   let params = new Request(url + amountToGet, {
+//     method: "GET",
+//   });
+//   fetch(params)
+//     .then((res) => res.json())
+//     .then(
+//       (results) => (response.innerHTML = JSON.stringify(results.data.products))
+//     )
+//     .catch((error) => (response.innerHTML = error));
+// };
+
 const btn = document.querySelector("button"),
   input = document.querySelector("input"),
   response = document.querySelector("#api-response"),
   url = "http://localhost/JavaScript Practice/API/v1/products/";
 
-btn.onclick = function () {
-  let amountToGet = input.value;
-  let params = new Request(url + amountToGet, {
-    method: "GET",
+let myData = {};
+
+fetch(url)
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    myData = data.data.products;
+    showResults(data.data.products);
   });
-  fetch(params)
-    .then((res) => res.json())
-    .then(
-      (results) => (response.innerHTML = JSON.stringify(results.data.products))
-    )
-    .catch((error) => (response.innerHTML = error));
-};
+
+function showResults(data) {
+  let select = document.createElement("select");
+  data.forEach(function (item) {
+    console.log(item);
+  });
+}
