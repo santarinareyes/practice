@@ -205,4 +205,9 @@ function showResults(data) {
     select.appendChild(option);
   });
   document.querySelector("body").appendChild(select);
+  select.onchange = function (e) {
+    console.log(e.target.value);
+    console.log(myData[e.target.value]);
+    response.innerHTML = myData[e.target.value].price;
+  };
 }
