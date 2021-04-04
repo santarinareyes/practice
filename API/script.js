@@ -138,10 +138,10 @@
 const btn = document.querySelector("button"),
   input = document.querySelector("input"),
   response = document.querySelector("#api-response"),
-  url = "https://randomuser.me/api/";
+  url = "http://localhost/JavaScript Practice/API/v1/products/";
 
 btn.onclick = function () {
-  let amountToGet = "?results=" + input.value;
+  let amountToGet = input.value;
   let params = new Request(url + amountToGet, {
     method: "GET",
   });
@@ -150,11 +150,11 @@ btn.onclick = function () {
       return response.json();
     })
     .then(function (responseJson) {
-      console.log(responseJson.results.length);
+      console.log(responseJson.data);
       response.innerHTML = "<ul>";
-      for (let i = 0; i < responseJson.results.length; i++) {
+      for (let i = 0; i < responseJson.data.products.length; i++) {
         response.innerHTML +=
-          "<li>" + responseJson.results[i].name.first + "</li>";
+          "<li>" + responseJson.data.products[i].title + "</li>";
       }
       response.innerHTML += "</ul>";
     })

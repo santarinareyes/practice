@@ -1,0 +1,12 @@
+php_flag display_errors on
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+
+<IfModule mod_rewrite.c>
+    Options -Multiviews
+    RewriteEngine On
+    RewriteBase /Ecom_REST-API/v1/public
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+    RewriteRule .* - [E=CONTENT_TYPE:%{HTTP:Content-Type},L]
+</IfModule>
