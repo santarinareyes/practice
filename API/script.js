@@ -197,7 +197,12 @@ fetch(url)
 
 function showResults(data) {
   let select = document.createElement("select");
-  data.forEach(function (item) {
-    console.log(item);
+  data.forEach(function (item, index) {
+    console.log(item, index);
+    let option = document.createElement("option");
+    option.value = index;
+    option.textContent = item.title;
+    select.appendChild(option);
   });
+  document.querySelector("body").appendChild(select);
 }
