@@ -24,3 +24,44 @@
 .post__description {
   margin-top: 0;
 }
+
+.Nav {
+  display: flex;
+  justify-content: center;
+}
+
+a.main__nav,
+.Create__Form button {
+  width: 80px;
+  height: 100%;
+  text-decoration: none;
+  background-color: rgb(5, 160, 5);
+  color: black;
+  border: 1px solid #e3e3e3;
+  margin-top: 15px;
+  color: white;
+  height: 30px;
+  padding-top: 5px;
+}
+
+a.main__nav:hover,
+.Create__Form button:hover,
+a.active {
+  background-color: rgb(2, 134, 2);
+}
+
+.Create__Form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.Create__Form input {
+  height: 25px;
+  margin: 1px;
+}
+
+.Create__Form button {
+  align-self: flex-end;
+}
